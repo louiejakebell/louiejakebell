@@ -1,0 +1,48 @@
+{
+  "name": "louiejakebell",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build && next export",
+    "start": "next",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "next": "^9.1.6",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.5.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn test"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
