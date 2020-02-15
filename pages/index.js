@@ -47,7 +47,7 @@ const Card = styled.a`
   background: ${props => props.background};
   color: ${props => props.color};
   width: 220px;
-  height: 170px;
+  height: 180px;
   margin: 10px;
   box-align: center;
   text-alignt: center;
@@ -69,11 +69,6 @@ const Card = styled.a`
   }
 
   p {
-    @media (max-width: 500px) {
-      min-height: 60px;
-    }
-
-    min-height: 100px;
     font-size: 1em;
     display: inline-table;
     text-decoration: none;
