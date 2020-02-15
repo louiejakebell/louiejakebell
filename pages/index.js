@@ -69,6 +69,11 @@ const Card = styled.a`
   }
 
   p {
+    @media (max-width: 500px) {
+      min-height: 60px;
+    }
+
+    min-height: 100px;
     font-size: 1em;
     display: inline-table;
     text-decoration: none;
