@@ -77,6 +77,42 @@ const Card = styled.a`
   }
 `
 
+const CurveStyles = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  transform: rotate(180deg);
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 200px;
+  }
+
+  .shape-fill {
+    fill: rgb(153, 144, 250);
+  }
+`
+
+const Curve = () => (
+  <CurveStyles>
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+        class="shape-fill"
+      ></path>
+    </svg>
+  </CurveStyles>
+)
+
 const ProfileImage = () => <Image src={Profile} width="140px" alt="profile" />
 const FlagImage = () => <Image src={Flag} width="20px" alt="flag" />
 const BicepImage = () => <Image src={Bicep} width="20px" alt="bicep" />
@@ -90,6 +126,8 @@ const Index = () => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <HorizontalCenter>
+      <Curve />
+
       <Title>
         Hello. <Image src={Hello} alt="wave" />
       </Title>
@@ -108,14 +146,12 @@ const Index = () => (
         LinkedIn
       </Anchor>
       {' • '}
-      <Anchor href="mailto:louiejakebell@gmail.com">
-        Email
-      </Anchor>
+      <Anchor href="mailto:louiejakebell@gmail.com">Email</Anchor>
 
       <Paragraph>
-        I am a developer working in London <FlagImage />. I currently
-        work @ Dunelm as a Front End Developer. Prior to this, I worked @
-        Gamesys starting off as a Graduate Software Engineer; trying out different
+        I am a developer working in London <FlagImage />. I currently work @
+        Dunelm as a Front End Developer. Prior to this, I worked @ Gamesys
+        starting off as a Graduate Software Engineer; trying out different
         languages until I made the decision to focus my career on JavaScript.
       </Paragraph>
 
