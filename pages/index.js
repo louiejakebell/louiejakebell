@@ -7,6 +7,7 @@ import Hello from '../images/hello.png'
 import Flag from '../images/flag.png'
 import Bicep from '../images/bicep.png'
 import Frame from '../images/frame.png'
+import Earth from '../images/earth.png'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -28,6 +29,7 @@ const Subtitle = styled.h2`
 const Paragraph = styled.p`
   font-size: 1em;
   line-height: 1.6;
+  width: 90%;
 `
 
 const HorizontalCenter = styled.div`
@@ -49,18 +51,17 @@ const Image = styled.img`
 const Card = styled.a`
   background: ${props => props.background};
   color: ${props => props.color};
-  width: 220px;
-  height: 160px;
-  margin: 10px;
-  text-alignt: left;
-  display: inline-table;
+  width: 20rem;
+  height: 100%;
+  margin: 1rem 0 1rem 0;
   padding: 10px;
   border-radius: 5px;
+  display: inline-table;
+  text-decoration: none;
   box-sizing: border-box;
 
-  @media (max-width: 500px) {
-    width: 95%;
-    height: 100%;
+  @media (max-width: 350px) {
+    width: 90%;
   }
 
   h3 {
@@ -75,6 +76,25 @@ const Card = styled.a`
     margin-block-start: 0em;
     margin-block-end: 0em;
   }
+`
+
+const CardHeader = styled.h3`
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1rem 0 1rem 0;
+
+  span {
+    font-size: 0.8rem;
+  }
+`
+
+const CardList = styled.ul`
+  margin: 0 0 1rem 0;
+  padding-left: 1rem;
+`
+
+const IconImage = styled.img`
+  margin-top: 1rem;
 `
 
 const CurveStyles = styled.div`
@@ -117,6 +137,7 @@ const ProfileImage = () => <Image src={Profile} width="140px" alt="profile" />
 const FlagImage = () => <Image src={Flag} width="20px" alt="flag" />
 const BicepImage = () => <Image src={Bicep} width="20px" alt="bicep" />
 const FrameImage = () => <Image src={Frame} width="20px" alt="frame" />
+const EarthImage = () => <Image src={Earth} width="20px" alt="earth" />
 
 const Index = () => (
   <div>
@@ -156,37 +177,72 @@ const Index = () => (
       </Paragraph>
 
       <Paragraph>
-        I have a couple of my side projects listed below. The first is a gym
-        tracker web app <BicepImage /> and the second is a photo composition web
-        app <FrameImage />. The tech stacks used in either / both include: Next,
-        React, Redux, styled-components, lambda functions & MongoDB.
+        I have a few of my old and new side projects listed below including a
+        gym tracker web app <BicepImage />, animation experiments using three js{' '}
+        <EarthImage /> and a photo composition web app <FrameImage />. The tech
+        stacks used across these apps include: Next, React, Redux,
+        styled-components, serverless lambda functions, MongoDB & three js.
       </Paragraph>
 
       <Card
         target="_blank"
         href="https://trackify.netlify.com"
-        background="#2d3436"
+        background="linear-gradient(to top, #0ba360 0%, #3cba92 100%)"
         color="white"
       >
-        <h3>trackify</h3>
-        <p>
-          gym tracker web app with registration + login. set schedules, save
-          progress & visualize data. view other user profiles.
-        </p>
-        <BicepImage />
+        <CardHeader>
+          trackify
+          <span>&nbsp;(gym tracker web app)</span>
+        </CardHeader>
+
+        <CardList>
+          <li>registration + login</li>
+          <li> set weekly schedules</li>
+          <li>save workout progress & visualize data</li>
+          <li>search other user profiles</li>
+        </CardList>
+
+        <BicepImage src={Bicep} width="20px" alt="bicep" />
+      </Card>
+
+      <Card
+        target="_blank"
+        href="https://planetary.netlify.com"
+        background="linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+        background-blend-mode: multiply,multiply"
+        color="white"
+      >
+        <CardHeader>
+          planetary
+          <span>&nbsp;(solar system 3d animation)</span>
+        </CardHeader>
+
+        <CardList>
+          <li>3d animation in javascript</li>
+          <li>emersive view of our solar system</li>
+          <li>clickable planets</li>
+        </CardList>
+
+        <EarthImage />
       </Card>
 
       <Card
         target="_blank"
         href="https://composify.netlify.com"
-        background="#00b894"
+        background="#503283"
         color="white"
       >
-        <h3>composify</h3>
-        <p>
-          a photo composition web app. add a customized # of cards & upload
-          images inside each to create a composition.
-        </p>
+        <CardHeader>
+          composify
+          <span>&nbsp;(photo composition)</span>
+        </CardHeader>
+
+        <CardList>
+          <li>add images to web app</li>
+          <li>increase custom # of cards</li>
+          <li>visualize composition of photos</li>
+        </CardList>
+
         <FrameImage />
       </Card>
     </HorizontalCenter>
