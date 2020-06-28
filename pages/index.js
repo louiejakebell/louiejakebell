@@ -214,12 +214,12 @@ const Index = () => (
       >
         <CardHeader>
           planetary
-          <span>&nbsp;(solar system 3d animation)</span>
+          <span>&nbsp;(solar system)</span>
         </CardHeader>
 
         <CardList>
-          <li>3d animation in javascript</li>
-          <li>emersive view of our solar system</li>
+          <li>3d animation using javascript</li>
+          <li>emersive view of solar system</li>
           <li>clickable planets</li>
         </CardList>
 
