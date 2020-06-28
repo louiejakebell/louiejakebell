@@ -127,7 +127,7 @@ const Curve = () => (
     >
       <path
         d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-        class="shape-fill"
+        className="shape-fill"
       ></path>
     </svg>
   </CurveStyles>
@@ -178,7 +178,7 @@ const Index = () => (
 
       <Paragraph>
         I have a few of my old and new side projects listed below including a
-        gym tracker web app <BicepImage />, animation experiments using three js{' '}
+        gym tracker web app <BicepImage />, 3d javascript animations
         <EarthImage /> and a photo composition web app <FrameImage />. The tech
         stacks used across these apps include: Next, React, Redux,
         styled-components, serverless lambda functions, MongoDB & three js.
@@ -187,7 +187,7 @@ const Index = () => (
       <Card
         target="_blank"
         href="https://trackify.netlify.com"
-        background="linear-gradient(to top, #0ba360 0%, #3cba92 100%)"
+        background="forestgreen"
         color="white"
       >
         <CardHeader>
