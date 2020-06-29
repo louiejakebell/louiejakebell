@@ -187,7 +187,7 @@ const Index = () => (
       <Card
         target="_blank"
         href="https://trackify.netlify.com"
-        background="#27ae60"
+        background="rgb(72, 72, 80)"
         color="white"
       >
         <CardHeader>
@@ -208,8 +208,7 @@ const Index = () => (
       <Card
         target="_blank"
         href="https://planetary.netlify.com"
-        background="linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
-        background-blend-mode: multiply,multiply"
+        background="black"
         color="white"
       >
         <CardHeader>
@@ -229,7 +228,7 @@ const Index = () => (
       <Card
         target="_blank"
         href="https://composify.netlify.com"
-        background="#6a89cc"
+        background="rgb(108, 117, 125)"
         color="white"
       >
         <CardHeader>
