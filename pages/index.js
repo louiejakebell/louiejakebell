@@ -113,7 +113,7 @@ const CurveStyles = styled.div`
   }
 
   .shape-fill {
-    fill: rgb(153, 144, 250);
+    fill: lightgrey;
   }
 `
 
@@ -187,53 +187,49 @@ const Index = () => (
       <Card
         target="_blank"
         href="https://trackify.netlify.com"
-        background="rgb(72, 72, 80)"
+        background="#9990FA"
         color="white"
       >
         <CardHeader>
           trackify
-          <span>&nbsp;(gym tracker web app)</span>
+          <span>&nbsp;(gym tracker web app)</span>{' '}
+          <BicepImage src={Bicep} alt="bicep" />
         </CardHeader>
 
         <CardList>
           <li>registration + login</li>
-          <li> set weekly schedules</li>
-          <li>save workout progress & visualize data</li>
-          <li>search other user profiles</li>
+          <li>save gym progress & visualize data</li>
+          <li>set schedules & search other profiles</li>
         </CardList>
-
-        <BicepImage src={Bicep} width="20px" alt="bicep" />
       </Card>
 
       <Card
         target="_blank"
         href="https://planetary.netlify.com"
-        background="black"
+        background="rgb(72, 72, 80)"
         color="white"
       >
         <CardHeader>
           planetary
-          <span>&nbsp;(solar system)</span>
+          <span>&nbsp;(solar system)</span> <EarthImage />
         </CardHeader>
 
         <CardList>
           <li>3d animation using javascript</li>
-          <li>emersive view of solar system</li>
+          <li>immersive view of solar system</li>
           <li>clickable planets</li>
         </CardList>
-
-        <EarthImage />
       </Card>
 
       <Card
         target="_blank"
         href="https://composify.netlify.com"
-        background="rgb(108, 117, 125)"
+        background="#00b894"
         color="white"
       >
         <CardHeader>
           composify
-          <span>&nbsp;(photo composition)</span>
+          <span>&nbsp;(grid layout composition)</span> <FrameImage />
         </CardHeader>
 
         <CardList>
@@ -241,8 +237,6 @@ const Index = () => (
           <li>increase custom # of cards</li>
           <li>visualize composition of photos</li>
         </CardList>
-
-        <FrameImage />
       </Card>
     </HorizontalCenter>
   </div>
