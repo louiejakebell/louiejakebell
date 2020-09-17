@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(72, 72, 80);
   }
 `
 
@@ -26,10 +27,15 @@ const Subtitle = styled.h2`
   margin-block-start: 0.3em;
 `
 
+const ParagraphTitle = styled.h3`
+  font-size: 1.4em;
+  margin-block-start: 0.3em;
+`
+
 const Paragraph = styled.p`
   font-size: 1em;
   line-height: 1.6;
-  width: 90%;
+  max-width: 500px;
 `
 
 const HorizontalCenter = styled.div`
@@ -51,40 +57,34 @@ const Image = styled.img`
 const Card = styled.a`
   background: ${props => props.background};
   color: ${props => props.color};
-  width: 20rem;
+  max-width: 400px;
   height: 100%;
   margin: 1rem 0 1rem 0;
-  padding: 10px;
+  padding: 1em 2em;
   border-radius: 5px;
   display: inline-table;
   text-decoration: none;
   box-sizing: border-box;
 
-  @media (max-width: 350px) {
-    width: 90%;
+  &:hover {
+    text-decoration: underline;
   }
 
   h3 {
     margin-block-start: 0.2em;
     margin-block-end: 0.2em;
   }
-
-  p {
-    font-size: 1em;
-    display: inline-table;
-    text-decoration: none;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-  }
 `
 
-const CardHeader = styled.h3`
+const CardTitle = styled.h3`
   text-decoration: none;
   font-size: 1.2rem;
-  padding: 1rem 0 1rem 0;
+  width: fit-content;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 
   span {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 `
 
@@ -143,7 +143,7 @@ const Index = () => (
   <div>
     <GlobalStyle />
     <Head>
-      <title>louie jake bell</title>
+      <title>louie jake bell (@louiejakebell)</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <HorizontalCenter>
@@ -177,66 +177,31 @@ const Index = () => (
       </Paragraph>
 
       <Paragraph>
-        I have a few of my old and new side projects listed below including a
-        gym tracker web app <BicepImage />, 3d javascript animations
+        I have one of my side projects listed below; a gym tracker web
+        application <BicepImage />. In addition to this, I have some other old
+        side projects; 3d javascript animations
         <EarthImage /> and a photo composition web app <FrameImage />. The tech
         stacks used across these apps include: Next, React, Redux,
         styled-components, serverless lambda functions, MongoDB & three js.
       </Paragraph>
 
+      <ParagraphTitle>Featured side projects</ParagraphTitle>
+
       <Card
         target="_blank"
         href="https://trackify.netlify.com"
-        background="#9990FA"
-        color="white"
-      >
-        <CardHeader>
-          trackify
-          <span>&nbsp;(gym tracker web app)</span>{' '}
-          <BicepImage src={Bicep} alt="bicep" />
-        </CardHeader>
-
-        <CardList>
-          <li>registration + login</li>
-          <li>save gym progress & visualize data</li>
-          <li>set schedules & search other profiles</li>
-        </CardList>
-      </Card>
-
-      <Card
-        target="_blank"
-        href="https://planetary.netlify.com"
         background="rgb(72, 72, 80)"
         color="white"
       >
-        <CardHeader>
-          planetary
-          <span>&nbsp;(solar system)</span> <EarthImage />
-        </CardHeader>
-
-        <CardList>
-          <li>3d animation using javascript</li>
-          <li>immersive view of solar system</li>
-          <li>clickable planets</li>
-        </CardList>
-      </Card>
-
-      <Card
-        target="_blank"
-        href="https://composify.netlify.com"
-        background="#00b894"
-        color="white"
-      >
-        <CardHeader>
-          composify
-          <span>&nbsp;(grid layout composition)</span> <FrameImage />
-        </CardHeader>
-
-        <CardList>
-          <li>add images to web app</li>
-          <li>increase custom # of cards</li>
-          <li>visualize composition of photos</li>
-        </CardList>
+        <CardTitle>
+          trackify&nbsp;
+          <BicepImage src={Bicep} alt="bicep" />
+        </CardTitle>
+        <Paragraph>
+          A serverless gym tracker web application used to visualize workout
+          progress. Features include: registration, login, customised gym plans,
+          adding exercises, saving progress data, searching profiles.
+        </Paragraph>
       </Card>
     </HorizontalCenter>
   </div>
