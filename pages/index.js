@@ -67,7 +67,9 @@ const Card = styled.a`
   box-sizing: border-box;
 
   &:hover {
-    text-decoration: underline;
+    h3 {
+      text-decoration: underline;
+    }
   }
 
   h3 {
@@ -77,6 +79,7 @@ const Card = styled.a`
 `
 
 const CardTitle = styled.h3`
+  display: inline-block;
   text-decoration: none;
   font-size: 1.2rem;
   width: fit-content;
@@ -193,10 +196,8 @@ const Index = () => (
         background="rgb(72, 72, 80)"
         color="white"
       >
-        <CardTitle>
-          trackify&nbsp;
-          <BicepImage src={Bicep} alt="bicep" />
-        </CardTitle>
+        <CardTitle>trackify</CardTitle>
+        <BicepImage src={Bicep} alt="bicep" />
         <Paragraph>
           A serverless gym tracker web application used to visualize workout
           progress. Features include: registration, login, customised gym plans,
