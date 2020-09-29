@@ -222,9 +222,9 @@ const Index = () => (
         <CardTitle>msngr</CardTitle>
         <MessageImage />
         <Paragraph>
-          A small realtime messaging web application with a quick and easy way
-          to start a quick chat with a friend / colleague. Developed using the
-          WebSocket API, Next, React, AWS Lambda Functions, DynamoDB.
+          A small realtime messaging web application with an easy way to start a
+          quick chat with a friend / colleague. Developed using the WebSocket
+          API, Next, React, AWS Lambda Functions, DynamoDB.
         </Paragraph>
       </Card>
     </HorizontalCenter>
