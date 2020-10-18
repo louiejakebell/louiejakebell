@@ -9,14 +9,13 @@ const Paragraph = styled.p`
 const Card = styled.a`
   background: ${props => props.background};
   color: ${props => props.color};
-
   touch-action: pan-y;
   width: 400px;
-  height: 220px;
+  flex-grow: 0;
+  flex-shrink: 0;
   padding: 1em 2em;
   margin: 1em 0;
   border-radius: 5px;
-  display: inline-table;
   text-decoration: none;
   box-sizing: border-box;
 
@@ -35,7 +34,6 @@ const Card = styled.a`
 
   @media (max-width: 500px) {
     width: calc(100vw - 100px);
-    height: 380px;
   }
 `
 
