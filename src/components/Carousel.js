@@ -88,7 +88,6 @@ const Carousel = ({ children }) => {
   })
 
   useEffect(() => {
-    console.log(step)
     const steppers = Array.from(stepperListRef?.current?.children || [])
     const visibleSteppers = steppers.filter(
       element => getComputedStyle(element)?.display !== 'none'

@@ -12,7 +12,7 @@ import {
   Anchor,
   Image,
   CardTitle,
-  CurveStyles
+  Curve
 } from '../src/components/styled'
 import Hello from '../images/hello.png'
 import Flag from '../images/flag.png'
@@ -30,22 +30,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Curve = () => (
-  <CurveStyles>
-    <svg
-      data-name="Layer 1"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1200 120"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-        className="shape-fill"
-      ></path>
-    </svg>
-  </CurveStyles>
-)
-
 const FlagImage = () => <Image src={Flag} width="20px" alt="flag" />
 const BicepImage = () => <Image src={Bicep} width="20px" alt="bicep" />
 const MessageImage = () => <Image src={Message} width="20px" alt="message" />
@@ -61,9 +45,10 @@ const Index = () => (
     <HorizontalCenter>
       <Curve />
 
-      <Title>
-        Hello. <Image src={Hello} alt="wave" />
-      </Title>
+      <div>
+        <Title>Hello.</Title>
+        <Image src={Hello} alt="wave" />
+      </div>
 
       <Subtitle>My name is Louie.</Subtitle>
 
@@ -82,11 +67,10 @@ const Index = () => (
       <Anchor href="mailto:louiejakebell@gmail.com">Email</Anchor>
 
       <Paragraph>
-        I am a developer working in London{' '}
-        <Image src={Flag} width="20px" alt="flag" />. I currently work @ Dunelm
-        as a Front End Developer. Prior to this, I worked @ Gamesys starting off
-        as a Graduate Software Engineer; trying out different languages until I
-        made the decision to focus my career on JavaScript.
+        I am a developer working in London <FlagImage />. I currently work @
+        Dunelm as a Front End Developer. Prior to this, I worked @ Gamesys
+        starting off as a Graduate Software Engineer; trying out different
+        languages until I made the decision to focus my career on JavaScript.
       </Paragraph>
 
       <Paragraph>
