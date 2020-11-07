@@ -87,11 +87,11 @@ const Index = () => (
       <Carousel>
         <Card
           target="_blank"
-          href="https://trackify.netlify.com"
+          href="https://setwork.netlify.com"
           background="rgb(72, 72, 80)"
           color="white"
         >
-          <CardTitle>trackify</CardTitle>
+          <CardTitle>setwork</CardTitle>
           <BicepImage />
           <Paragraph>
             A serverless gym tracker web application used to visualize workout
