@@ -62,7 +62,7 @@ const Index = () => (
     </Head>
 
     <Header>
-      <ProfileImage src={Profile} width="20px" alt="profile" />
+      <ProfileImage src={Profile} alt="profile" />
 
       <Title>Heya!</Title>
       <Image src={Hello} width="30px" alt="wave" />

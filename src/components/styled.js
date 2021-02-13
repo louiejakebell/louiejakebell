@@ -59,7 +59,7 @@ const HorizontalCenter = styled.div`
   margin: 0 auto;
   display: table;
   max-width: 500px;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 `
 
 const Anchor = styled.a`
