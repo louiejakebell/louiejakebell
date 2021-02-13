@@ -121,10 +121,9 @@ const Index = () => (
           </CardTitle>
 
           <Paragraph>
-            A gym network used to track and visualize workout progress. Features
-            include: registration, login, creating customised plans, adding new
-            exercises, saving progress data and searching profiles. Developed
-            with React, Redux, Next.js and Netlify lambda functions.
+            A gym network used to track and visualize workout progress.
+            Registration, login, customised plans, saving progress data and
+            searching profiles.
           </Paragraph>
         </Card>
 
@@ -141,8 +140,7 @@ const Index = () => (
 
           <Paragraph>
             A small realtime messaging web application with an easy way to start
-            a quick chat with a friend / colleague. Developed using the
-            WebSocket API, Next.js, React, AWS Lambda Functions and DynamoDB.
+            a quick chat with a friend / colleague.
           </Paragraph>
         </Card>
 
@@ -158,9 +156,8 @@ const Index = () => (
           </CardTitle>
 
           <Paragraph>
-            A small web application used to convert currencies and exchange
-            money between wallets. Developed using the React, Context API,
-            Next.js and Netlify Lambda Functions.
+            A small web app used to convert currencies and exchange money
+            between wallets.
           </Paragraph>
         </Card>
       </Carousel>

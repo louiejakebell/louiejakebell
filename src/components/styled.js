@@ -11,7 +11,6 @@ const Card = styled.a`
   background: ${props => props.background};
   color: ${props => props.theme.activeColor};
   touch-action: pan-y;
-  width: 400px;
   flex-grow: 0;
   flex-shrink: 0;
   padding: 1em 2em;
@@ -31,10 +30,6 @@ const Card = styled.a`
   h3 {
     margin-block-start: 0.2em;
     margin-block-end: 0.2em;
-  }
-
-  @media (max-width: ${props => props.theme.maxWidth}) {
-    width: calc(100vw - 100px);
   }
 `
 

@@ -7,14 +7,6 @@ import theme from '../theme'
 const minXSwipe = 200
 const transitionTime = 200
 
-const CarouselWrapper = styled.div`
-  max-width: ${props => props.theme.maxWidth};
-
-  @media (max-width: ${props => props.theme.maxWidth}) {
-    width: calc(100vw - 20px);
-  }
-`
-
 const ListCarousel = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -97,7 +89,7 @@ const Carousel = ({ children }) => {
   }, [step])
 
   return (
-    <CarouselWrapper>
+    <div>
       <ListCarousel>
         <div>
           <Button onClick={slideLeft}>
@@ -128,7 +120,7 @@ const Carousel = ({ children }) => {
           <Stepper key={index} active={step === index} />
         ))}
       </List>
-    </CarouselWrapper>
+    </div>
   )
 }
 
