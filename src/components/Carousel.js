@@ -8,9 +8,9 @@ const minXSwipe = 200
 const transitionTime = 200
 
 const CarouselWrapper = styled.div`
-  max-width: 500px;
+  max-width: ${props => props.theme.maxWidth};
 
-  @media (max-width: 500px) {
+  @media (max-width: ${props => props.theme.maxWidth}) {
     width: calc(100vw - 20px);
   }
 `

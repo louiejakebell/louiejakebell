@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Paragraph = styled.p`
   font-size: 1em;
   line-height: 1.6;
-  max-width: 500px;
+  max-width: ${props => props.theme.maxWidth};
 `
 
 const Card = styled.a`
@@ -33,7 +33,7 @@ const Card = styled.a`
     margin-block-end: 0.2em;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: ${props => props.theme.maxWidth}) {
     width: calc(100vw - 100px);
   }
 `
@@ -52,14 +52,20 @@ const Subtitle = styled.h2`
 
 const ParagraphTitle = styled.h3`
   font-size: 1.4em;
-  margin-block-start: 0.3em;
+  margin: 2em 0 0 0;
+  text-align: center;
 `
 
 const HorizontalCenter = styled.div`
-  margin: 0 auto;
-  display: table;
-  max-width: 500px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: ${props => props.theme.maxWidth};
   padding: 2rem 1rem;
+
+  @media (max-width: ${props => props.theme.maxWidth}) {
+    width: calc(100% - 50px);
+  }
 `
 
 const Anchor = styled.a`
