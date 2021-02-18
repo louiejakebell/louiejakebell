@@ -95,15 +95,15 @@ const Index = () => (
       </SocialIcons>
 
       <Paragraph>
-        I am a Front End Developer from London <FlagImage /> with a passion for
-        React / Next.js. I love developing JavaScript applications and I made
+        I am a Software Engineer from London <FlagImage /> with a passion for
+        problem solving. I love developing JavaScript / React applications and I made
         the decision early in my career to pursue this language.
       </Paragraph>
 
       <Paragraph>
         My prominent experience is with the following technologies / frameworks:
         JavaScript, TypeScript, CSS, styled-components, Next.js, React, Redux,
-        Node, Jest, React Testing Library and Netlify.
+        Node, Jest, React Testing Library & Netlify.
       </Paragraph>
 
       <ParagraphTitle>Featured side projects</ParagraphTitle>
