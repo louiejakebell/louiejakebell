@@ -96,8 +96,8 @@ const Index = () => (
 
       <Paragraph>
         I am a Software Engineer from London <FlagImage /> with a passion for
-        problem solving. I love developing JavaScript / React applications and I made
-        the decision early in my career to pursue this language.
+        problem solving. I love developing React applications and I made
+        the decision early in my career to pursue JavaScript.
       </Paragraph>
 
       <Paragraph>
