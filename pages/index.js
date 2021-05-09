@@ -20,7 +20,8 @@ import Flag from '../images/flag.png'
 import Bicep from '../images/bicep.png'
 import Message from '../images/message.png'
 import Money from '../images/money.png'
-import Profile from '../images/profile.png'
+import Profile from '../images/memoji.jpg'
+import Planet from '../images/planet.png'
 
 import theme from '../src/theme'
 import Carousel from '../src/components/Carousel'
@@ -56,6 +57,7 @@ const FlagImage = () => <Image src={Flag} width="20px" alt="flag" />
 const BicepImage = () => <Image src={Bicep} width="20px" alt="bicep" />
 const MessageImage = () => <Image src={Message} width="20px" alt="message" />
 const MoneyImage = () => <Image src={Money} width="20px" alt="money" />
+const PlanetImage = () => <Image src={Planet} width="20px" alt="planet" />
 
 const Index = () => (
   <ThemeProvider theme={theme}>
@@ -76,16 +78,25 @@ const Index = () => (
 
     <HorizontalCenter>
       <SocialIcons>
-        <Anchor target="_blank" href="https://twitter.com/louiejakebell">
+        <Anchor
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/louiejakebell"
+        >
           Twitter
         </Anchor>
         {' • '}
-        <Anchor target="_blank" href="https://github.com/louiejakebell">
+        <Anchor
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/louiejakebell"
+        >
           GitHub
         </Anchor>
         {' • '}
         <Anchor
           target="_blank"
+          rel="noopener noreferrer"
           href="https://www.linkedin.com/in/louiejakebell/"
         >
           LinkedIn
@@ -96,14 +107,14 @@ const Index = () => (
 
       <Paragraph>
         I am a Software Engineer from London <FlagImage /> with a passion for
-        problem solving. I love developing React applications and I made
-        the decision early in my career to pursue JavaScript.
+        problem solving. I love developing React applications and I made the
+        decision early in my career to pursue JavaScript.
       </Paragraph>
 
       <Paragraph>
         My prominent experience is with the following technologies / frameworks:
-        JavaScript, TypeScript, CSS, styled-components, Next.js, React, Redux,
-        Node, Jest, React Testing Library & Netlify.
+        JavaScript, TypeScript, CSS, Next.js, React, Node, Jest & React Testing
+        Library.
       </Paragraph>
 
       <ParagraphTitle>Featured side projects</ParagraphTitle>
@@ -111,6 +122,26 @@ const Index = () => (
       <Carousel>
         <Card
           target="_blank"
+          rel="noopener noreferrer"
+          href="https://convey.vercel.app/"
+          background="#E2E8F0"
+          color="white"
+        >
+          <CardTitle>
+            convey
+            <PlanetImage />
+          </CardTitle>
+
+          <Paragraph>
+            Version 2.0 gym planner web app used to track and visualize workout
+            progress. Second iteration of the technology stack includes:
+            PostgreSQL, Prisma, Next, Chakra, Next-Auth and react-query.
+          </Paragraph>
+        </Card>
+
+        <Card
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://setwork.netlify.com"
           background="#F7F3E3"
           color="white"
@@ -121,14 +152,15 @@ const Index = () => (
           </CardTitle>
 
           <Paragraph>
-            A gym network used to track and visualize workout progress.
-            Registration, login, customised plans, saving progress data and
-            searching profiles.
+            Version 1.0 gym planner web app used to track and visualize workout
+            progress. Registration, login, customised plans, saving progress
+            data and searching profiles.
           </Paragraph>
         </Card>
 
         <Card
           target="_blank"
+          rel="noopener noreferrer"
           href="https://msngr.netlify.com"
           background="#DAC4F7"
           color="white"
@@ -146,6 +178,7 @@ const Index = () => (
 
         <Card
           target="_blank"
+          rel="noopener noreferrer"
           href="https://exchangify.netlify.com"
           background="#D6F6DD"
           color="white"
