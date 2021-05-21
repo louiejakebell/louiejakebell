@@ -43,6 +43,7 @@ const Header = styled.div`
 
 const ProfileImage = styled.img`
   width: 140px
+  height: 140px
   object-position: scale-down;
   border-radius: 100px;
   display: table;
@@ -68,7 +69,7 @@ const Index = () => (
     </Head>
 
     <Header>
-      <ProfileImage src={Profile} alt="profile" />
+      <ProfileImage width="140px" height="140px" src={Profile} alt="profile" />
 
       <Title>Hey!</Title>
       <Image src={Hello} width="30px" alt="wave" />
